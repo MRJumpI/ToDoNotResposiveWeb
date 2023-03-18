@@ -1,0 +1,320 @@
+*{
+	font-family: 'Prompt', sans-serif;
+	background: #0f0f10;
+	color: #ffffff;
+	overflow: hidden;
+}
+
+
+@keyframes animateWave{
+		0%{
+			background-position-x:100px ;
+		}
+
+		100%{
+			background-position-x:1000px ;
+
+		}
+}
+
+.first{
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	}
+
+
+.spacerupper{
+	aspect-ratio: 930/250;
+
+	rotate: 180deg;
+	position: absolute;
+	top: 0;
+	background: url("./layer.svg") no-repeat;
+	width: 100%;
+	background-position:center ;
+	background-size: cover;
+	z-index: 1;
+}
+
+.spacerlower{
+	aspect-ratio: 930/250;
+	position: absolute;
+	bottom: 0;
+	background: url("./layer.svg") no-repeat;
+	width: 100%;
+	background-position:center ;
+	background-size: cover;
+	z-index: 1;
+}
+
+.blob,.content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.content,h1,span
+{
+
+z-index: 1;
+background: transparent;
+
+}
+
+.content{
+top: 40%;
+width: 50%;
+text-align: center;
+}
+
+.bgImage{
+
+	width: 100%;
+	height: 100%;
+	background-image: url("https://source.unsplash.com/random/1600x900");
+	background-size: cover;
+	z-index: 1000;
+	position: absolute;
+	top:0;
+	left: 0;
+	transform: scale(0);
+	opacity: 0;
+	transition:.3s opacity, .5s transform;
+	opacity: 1;
+	transform: scale(0);
+}
+
+.active-main{
+	opacity: 1;
+	transform: scale(1);
+}
+
+.heading{
+	text-align: center;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.7);
+	width: auto;
+}	
+
+
+.taketask
+{
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	padding-inline: 90px;
+	width: 100%;
+}
+
+.taketask div{
+	background: transparent;
+	width: 100%;
+}
+
+
+.Add{
+	background: black;
+	padding: 5px;
+	border-radius: 10px ;
+	padding-bottom: none;
+
+}
+
+.Add:hover{
+	transform: scale(1.3);
+
+}
+
+
+.List{
+
+	flex-wrap: wrap;
+	display: flex;
+	width: 50%;
+	height: 50%;
+	padding: 20px;
+	background: rgba(51, 51, 51, 0.7);
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	backdrop-filter: blur(4px);
+	
+
+}
+
+.card{
+	color: white;
+	background: #1d1b26;
+	transform: scale(0.9);
+	margin: 20px;
+	margin-top: 30px;
+	padding-bottom: 20px;
+	padding-inline: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-radius:30px ;
+	justify-content: space-between;
+	height: 30%;
+	letter-spacing: 4px;
+	cursor: pointer;
+	transition: .2s;
+	transform: scale(0.8);
+}
+
+.card > div{
+	background: transparent;
+	widows: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.card:hover{
+	transform: scale(1.0);
+
+}
+
+.card span{
+	margin-top: 20px;
+	color: gray;
+}
+
+.cardactive{
+	height: auto;
+}
+
+.card h1{
+	font-weight: normal;
+}
+
+.btns{
+	background: transparent;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+img{
+	background: transparent;
+}
+
+button{
+	margin:10px;
+	background: transparent;
+	overflow: transparent;
+	border: none;
+	transition: .3s;
+	vertical-align: middle;
+}
+
+button:hover{
+	cursor: pointer;
+	transform: scale(2);
+}
+
+
+.checkList{
+	width: 90%;
+	background: transparent;
+	overflow-y: scroll;
+	height: 50%;
+	margin: 10px;
+}
+
+.input{
+	background: red;
+	position: relative;
+	margin:10px ;
+	padding: 10px;
+	width: 100%;
+}
+
+.input input{
+	background: transparent;
+	outline: transparent;
+	padding: 5px;
+	border:none;
+	width: 100%;
+	border-bottom: 3px solid #000000;
+	width: 100%;
+}
+
+.input label{
+	background: transparent;
+	text-transform: uppercase;
+	position: absolute;
+	font-size: 18px;
+	bottom: 20px;
+	transition: .3s;
+}
+
+.input .activelabel{
+	top: -5px;
+	font-size: 12px;
+	letter-spacing: 3px;
+}
+
+.input .line{
+	content: ".";
+	width: 100%;
+	height: 3px;
+	background: #725cee;
+	position: absolute;
+	left: 0;
+	bottom:10px ;	
+	overflow: hidden;
+	z-index: 10000000;
+	transform: scale(0);
+	transition: .3s;
+}
+
+
+.secondinput{
+	background: red;
+	width: 100%;
+	display: flex;
+	flex-direction:row ;
+	justify-content: space-between;
+}
+
+.secondinputDiv{
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+label{
+	background: transparent;
+}
+textarea{
+	background: rgba(0, 0, 0, 0.3);
+	outline: none;
+	border: none;
+	padding: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #725cee; `
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3c2f85; 
+}
